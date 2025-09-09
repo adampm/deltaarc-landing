@@ -1,5 +1,4 @@
-# Define the basic HTML content for the DeltaArc "Coming Soon" holding page
-html_content = """<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -54,11 +53,3 @@ html_content = """<!DOCTYPE html>
   </div>
 </body>
 </html>
-"""
-
-# Save as index.html
-from pathlib import Path
-html_path = Path("/mnt/data/index.html")
-html_path.write_text(html_content)
-
-html_path.name  # Return file name for download
