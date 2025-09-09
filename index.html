@@ -1,0 +1,64 @@
+# Define the basic HTML content for the DeltaArc "Coming Soon" holding page
+html_content = """<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DeltaArc Consulting</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0A1F44;
+      color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    img.logo {
+      width: 160px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 2.4rem;
+      margin: 0;
+    }
+    p.tagline {
+      font-size: 1.2rem;
+      margin: 10px 0 30px;
+      color: #2CD4F3;
+    }
+    .links a {
+      color: #2CD4F3;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 1rem;
+    }
+    .links {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <img src="assets/deltaarc-logo.png" alt="DeltaArc Logo" class="logo">
+  <h1>DeltaArc Consulting</h1>
+  <p class="tagline">Modern cloud. Expertly delivered.</p>
+  <div class="links">
+    <a href="mailto:hello@deltaarc.cloud">hello@deltaarc.cloud</a>
+    |
+    <a href="https://www.linkedin.com/company/deltaarc-consulting/" target="_blank">LinkedIn</a>
+  </div>
+</body>
+</html>
+"""
+
+# Save as index.html
+from pathlib import Path
+html_path = Path("/mnt/data/index.html")
+html_path.write_text(html_content)
+
+html_path.name  # Return file name for download
